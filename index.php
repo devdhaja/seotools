@@ -24,6 +24,16 @@ if ( !isset( $_SESSION[ 'admin' ] ) )
         <!-- Custom Theme Style -->
         <link href="css/custom.min.css" rel="stylesheet">
         <base href="https://demoseotools.herokuapp.com/"> 
+			
+		<style>
+        .loading-spiner-holder {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            /* background: red; */
+            z-index: 9999;
+        }
+    </style>
     </head>
     <body class="nav-md footer_fixed" style="display: none;" id="page">
         <div class="container body" id="overlay-back ">
@@ -151,6 +161,13 @@ if ( !isset( $_SESSION[ 'admin' ] ) )
          Load all script here 
         -->
 
+	
+	
+	   <!--end loader code here-->
+    <div class="loading-spiner-holder" data-loading>
+        <div class="loading-spiner"><img src="http://www.nasa.gov/multimedia/videogallery/ajax-loader.gif" /></div>
+    </div>
+	
         <script src="controller/config.js"></script>
         <script src="js/angular.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
