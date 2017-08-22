@@ -199,5 +199,6 @@ if ( !isset( $_SESSION[ 'admin' ] ) )
         <script src="js/echarts.min.js"></script>
         <script src="js/world.js"></script>
         <script src="controller/country-traffic.js"></script>
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     </body>
 </html>

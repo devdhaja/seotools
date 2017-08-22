@@ -19,7 +19,17 @@
 
         <!-- Custom Theme Style -->
         <link href="css/custom.min.css" rel="stylesheet">
-        <base href="/tracker/"> 
+        <base href="/seotools/"> 
+		
+		<style>
+        .loading-spiner-holder {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            /* background: red; */
+            z-index: 9999;
+        }
+    </style>
     </head>
 
     <body class="nav-md footer_fixed" style="display: none;" id="page">
@@ -153,6 +163,10 @@
         <!--
          Load all script here 
         -->
+		
+		  <div class="loading-spiner-holder" data-loading>
+        <div class="loading-spiner"><img src="http://www.nasa.gov/multimedia/videogallery/ajax-loader.gif" /></div>
+    </div>
 
         <script src="controller/config.js"></script>
         <script src="js/angular.js"></script>
