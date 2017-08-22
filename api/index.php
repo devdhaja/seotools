@@ -1,9 +1,5 @@
 <?php
 session_start();
-header( 'Access-Control-Allow-Origin: *' );
-header( 'Access-Control-Allow-Headers: X-Requested-With' );
-header( "HTTP/1.1 200 OK" );
-
 require_once'Slim/Slim.php';
 include_once 'classes/config.php';
 include_once 'classes/logic.php';
