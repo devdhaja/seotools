@@ -135,7 +135,7 @@ if ( !isset( $_SESSION[ 'admin' ] ) )
                 <!-- footer content -->
                 <footer>
                     <div class="pull-right">
-                        &copy All right reserved <a href="#">Spear</a>
+                        &copy All right reserved <a href="#">Dev</a>
                     </div>
                     <div class="clearfix"></div>
                 </footer>
@@ -168,12 +168,7 @@ if ( !isset( $_SESSION[ 'admin' ] ) )
         <div class="loading-spiner"><img src="http://www.nasa.gov/multimedia/videogallery/ajax-loader.gif" /></div>
     </div>
 	
-        <script src="controller/config.js"></script>
-        <script src="js/angular.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
-        <script src="controller/home-page-clt.js"></script>
-        <script src="controller/route.js"></script>
-
+       
         <!-- jQuery -->
         <script src="js/jquery.min.js"></script>
         <!-- Bootstrap -->
@@ -199,6 +194,11 @@ if ( !isset( $_SESSION[ 'admin' ] ) )
         <script src="js/echarts.min.js"></script>
         <script src="js/world.js"></script>
         <script src="controller/country-traffic.js"></script>
-		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		 <script src="controller/config.js"></script>
+        <script src="js/angular.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+        <script src="controller/home-page-clt.js"></script>
+        <script src="controller/route.js"></script>
+
     </body>
 </html>
