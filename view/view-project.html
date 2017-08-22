@@ -1,0 +1,181 @@
+
+<div class="row" ng-init="getThisProjectDetails()">
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Project Details</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <label>Url</label> : <b>{{thisProject.url}}</b> &nbsp;&nbsp; | &nbsp;&nbsp;
+                <label>Starting Date</label> : <b>{{thisProject.date_and_time| moment:"fromNow"}}</b> &nbsp;&nbsp; | &nbsp;&nbsp;
+                <label>Posted Ip</label> : <b>{{thisProject.ip}}</b> &nbsp;&nbsp; | &nbsp;&nbsp;
+                <label>Total Views</label> : <b>{{thisProject.views}}</b> &nbsp;&nbsp; | &nbsp;&nbsp;
+                <label>Total Clicks</label> : <b>{{thisProject.click}}</b> &nbsp;&nbsp; | &nbsp;&nbsp;
+                <label style="color:green">Alexa Rank</label> : <b>{{thisProject.alex.SD[1].REACH['@attributes'].RANK}}</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Last User</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" style="overflow: auto;">
+                <table class="table table-responsive table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Country</th>
+                            <th>Ip</th>
+                            <th>Time</th>
+                            <th>Page</th>
+                            <th>Host</th>
+                            <th>State</th>
+                            <th>City</th>
+                            <th>Pin code</th>
+                            <th>View Map</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr  >
+                            <th scope="row">{{thisProject.last.country}}</th>
+                            <td>{{thisProject.last.ip}}</td>
+                            <td>{{thisProject.last.date| moment:'fromNow'}}</td>
+                            <td style="word-break: break-all;">{{thisProject.last.url}}</td>
+                            <td>{{thisProject.last.host}}</td>
+                            <td>{{thisProject.last.state}}</td>
+                            <td>{{thisProject.last.city}}</td>
+                            <td>{{thisProject.last.pin}}</td>
+                            <td><button ng-click="openGoogleMap(thisProject.last.location)" class="btn btn-primary"><i class="fa fa-eye"></i></button></td>
+                           
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Total Indexed Pages</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" style="overflow: auto;">
+                <table class="table table-responsive table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Url</th>
+                            <th>Date</th>
+                            <th>Ip</th>
+                            <th>Views</th>
+                            <th>Click</th>
+                            <th>Title</th>
+                            <th>Keywords</th>
+                            <th>Description</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="a in thisProject.pages" >
+                            <th scope="row">{{$index + 1}}</th>
+                            <td>{{a.url}}</td>
+                            <td>{{a.date| moment:'fromNow'}}</td>
+                            <td>{{a.ip}}</td>
+                            <td>{{a.views}}</td>
+                            <td>{{a.click}}</td>
+                            <td>{{a.title}}</td>
+                            <td><span ng-repeat="k in a.keywords">{{k}} </span></td>
+                            <td><span ng-repeat="d in a.description">{{d}} </span></td>
+                            <td><button class="btn btn-success" ng-click="updateUserKeyWords(a.keywords, a.title, a.description, a.url, a.id, $index)" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-edit"></i></button></td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Week  Summery</h2>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <canvas id="lineChart" ng-init="getChartsData()"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Country view wise traffic </h2>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div id="echart_world_map" style="height:370px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Country wise click traffic </h2>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div id="echart_world_map_click" style="height:370px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12" style="height: 120px;"></div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content" >
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel2">Edit</h4>
+            </div>
+            <div class="modal-body" style="height: 390px;">
+                <h6 style="word-wrap: break-word;">{{e.url}}</h6>
+                <div class="col-md-12">
+                    <label>Title</label>
+                    <input type="text" ng-model="e.title" class='form-control'><br>
+                    <label>Keywords</label>
+                    <textarea class="form-control" ng-model="e.keywords" ></textarea> <br>
+                    <label>Description</label>
+                    <textarea class="form-control" ng-model="e.description" style="height: 90px;"></textarea>
+                    <br>
+                    <label style="color: red;">{{editErrorMessage}}</label>
+                    <label style="color: green;">{{successMessage}}</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="updateKeyWords()">Save changes</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>

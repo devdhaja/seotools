@@ -1,0 +1,50 @@
+<!-- page content -->
+
+<div class="row top_tiles" ng-init="loadHomePageData()">
+    <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="tile-stats">
+            <div class="icon"><i class="fa fa-globe"></i></div>
+            <div class="count">{{homeRes.w}}</div>
+            <h3>All Web sites </h3>
+        </div>
+    </div>
+    <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="tile-stats">
+            <div class="icon"><i class="fa fa-list"></i></div>
+            <div class="count">{{homeRes.p}}</div>
+            <h3>Indexed Pages</h3>
+        </div>
+    </div>
+    <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="tile-stats">
+            <div class="icon"><i class="fa fa-eye"></i></div>
+            <div class="count">{{homeRes.w}}</div>
+            <h3>Total Views</h3>
+        </div>
+    </div>
+    <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="tile-stats">
+            <div class="icon"><i class="fa fa-mouse-pointer"></i></div>
+            <div class="count">{{homeRes.c}}</div>
+            <h3>Total Clicks</h3>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Week  Summery</h2>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <canvas id="lineChart" ng-init="getChartsData()"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /page content -->
+

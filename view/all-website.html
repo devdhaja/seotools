@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>All Websites </h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" style="overflow: auto;">
+                <table class="table table-responsive table-bordered" ng-init="getAllSiteData()">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Url</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Ip</th>
+                            <th>Views</th>
+                            <th>Click</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="a in allSites" >
+                            <th scope="row">{{$index + 1}}</th>
+                            <td>{{a.url}}</td>
+                            <td>
+                                <img ng-if="a.online == 1" src="images/online.gif">
+                                <img ng-if="a.online != 1" src="images/ofline.png">
+                            </td>
+                            <td>{{a.date_and_time| moment:'fromNow'}}</td>
+                            <td>{{a.ip}}</td>
+                            <td>{{a.views}}</td>
+                            <td>{{a.click}}</td>
+                            <td width="15%">
+                                <a title="" ng-click="openThisPage(a.id)" class="btn btn-primary"><i class="fa fa-eye"></i></a>
+                                <!--<button class="btn btn-success"><i class="fa fa-edit"></i></button>-->
+                                <button class="btn btn-danger" ng-click="deleteThisProject(a.id)"><i class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
