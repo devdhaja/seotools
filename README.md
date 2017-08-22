@@ -1,10 +1,10 @@
 # seotools
 
 SEO Tool is utility for insert keyword meta description, tittle on web page witth very easly.Using  this utility user can track website trafic 
-click and trafic by country, view by country. And  user can track the compromisse status using this utility. this utility provide last visited ip
+click and trafic by country, view by country. And  user can track the compromise status using this utility. this utility provide last visited ip
 location and google map.
 
-How to usse? 
+How to use? 
 
 Clone code from this repository and create database.
 
@@ -41,6 +41,12 @@ Change user name email password and other admin details---
 <pre>
   Open user table in database and modified it.
 </pre>
+
+
+Demo Dashboard :: https://demoseotools.herokuapp.com/login.php
+
+Demo Websit :: https://demoseotools.herokuapp.com/test/index.html
+
 
 
 
