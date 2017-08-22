@@ -23,7 +23,7 @@ if ( !isset( $_SESSION[ 'admin' ] ) )
         <link href="css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
         <!-- Custom Theme Style -->
         <link href="css/custom.min.css" rel="stylesheet">
-        <base href="/tracker/"> 
+        <base href="https://demoseotools.herokuapp.com/"> 
     </head>
     <body class="nav-md footer_fixed" style="display: none;" id="page">
         <div class="container body" id="overlay-back ">

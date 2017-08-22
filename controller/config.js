@@ -1,2 +1,2 @@
-var __BASE_URL = "/tracker/api/"; 
+var __BASE_URL = "https://demoseotools.herokuapp.com/api/"; 
 

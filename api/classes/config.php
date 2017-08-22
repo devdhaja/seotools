@@ -1,11 +1,11 @@
 <?php
 
-define( 'HOST' , "localhost" );
-define( 'DB' , "tracker" );
-define( 'USER' , "root" );
-define( 'PASSWORD' , "" );
+define( 'HOST' , "sql12.freemysqlhosting.net" );
+define( 'DB' , "sql12191143" );
+define( 'USER' , "sql12191143" );
+define( 'PASSWORD' , "RhRp5FPrYs" );
 define( 'KEY' , "devrajverma" );
-define( 'URL' , "/tracker/" );
+define( 'URL' , "https://demoseotools.herokuapp.com/" );
 
 class config
 {
