@@ -1,9 +1,9 @@
 <?php
 
-define( 'HOST' , "sql12.freemysqlhosting.net" );
-define( 'DB' , "sql12191143" );
-define( 'USER' , "sql12191143" );
-define( 'PASSWORD' , "RhRp5FPrYs" );
+define( 'HOST' , "*******" );
+define( 'DB' , "*********" );
+define( 'USER' , "*******" );
+define( 'PASSWORD' , "****" );
 define( 'KEY' , "devrajverma" );
 define( 'URL' , "https://demoseotools.herokuapp.com/" );
 

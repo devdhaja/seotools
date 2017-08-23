@@ -96,10 +96,6 @@ function ajaxCallForCheckUserDetails () {
     var url = getSyncScriptParams ().url + "setUrlStatus" ;
     var xhr = new XMLHttpRequest () ;
     xhr.open ( "POST" , url , true ) ;
-      xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-    xhr.setRequestHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-    xhr.setRequestHeader("Access-Control-Allow-Headers", "Content-Type");
     xhr.setRequestHeader ( "Content-type" , "application/json" ) ;
     xhr.onreadystatechange = function () {
         if ( xhr.readyState == 4 && xhr.status == 200 ) {
@@ -122,9 +118,7 @@ function getAllMetaDeatils () {
     var url = getSyncScriptParams ().url + "getCurrentMetaForThisPage" ;
     xhr.open ( "POST" , url , true ) ;
     xhr.setRequestHeader ( "Content-Type" , "application/json; charset=UTF-8" ) ;
-    xhr.setRequestHeader ( "Access-Control-Allow-Origin" , "*" ) ;
-    xhr.setRequestHeader ( "Access-Control-Allow-Methods" , "GET, POST, OPTIONS" ) ;
-    xhr.setRequestHeader ( "Access-Control-Allow-Headers" , "Content-Type" ) ;
+
     // xhr.setRequestHeader("Access-Control-Request-Headers", "X-Requested-With, accept, content-type");
     xhr.onreadystatechange = function () {
         if ( xhr.readyState == 4 && xhr.status == 200 ) {
@@ -147,9 +141,7 @@ function getUserDeatils ( callback ) {
     var xhr = new XMLHttpRequest () ;
     xhr.open ( "GET" , url , true ) ;
     xhr.setRequestHeader ( "Content-Type" , "application/json; charset=UTF-8" ) ;
-    xhr.setRequestHeader ( "Access-Control-Allow-Origin" , "*" ) ;
-    xhr.setRequestHeader ( "Access-Control-Allow-Methods" , "GET, POST, OPTIONS" ) ;
-    xhr.setRequestHeader ( "Access-Control-Allow-Headers" , "Content-Type" ) ;
+
     xhr.onreadystatechange = function () {
         if ( xhr.readyState == 4 && xhr.status == 200 ) {
             var json = JSON.parse ( xhr.responseText ) ;
@@ -169,10 +161,7 @@ function mainCallForCheck ( d ) {
         var xhr = new XMLHttpRequest () ;
         xhr.open ( "POST" , url , true ) ;
         xhr.setRequestHeader ( "Content-Type" , "application/json; charset=UTF-8" ) ;
-        xhr.setRequestHeader ( "Access-Control-Allow-Origin" , "*" ) ;
-        xhr.setRequestHeader ( "Access-Control-Allow-Methods" , "GET, POST, OPTIONS" ) ;
-        xhr.setRequestHeader ( "Access-Control-Allow-Headers" , "Content-Type" ) ;
-        xhr.setRequestHeader ( "Content-type" , "application/json" ) ;
+        
         xhr.onreadystatechange = function () {
             if ( xhr.readyState == 4 && xhr.status == 200 ) {
                 var json = xhr.responseText ;

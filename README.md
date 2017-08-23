@@ -13,10 +13,10 @@ Change the configuration:
 Open Api/classes/config.php
 
 <pre>
-define( 'HOST' , "sql12.freemysqlhosting.net" );   //database host
-define( 'DB' , "sql12191143" );   // Database name
-define( 'USER' , "sql12191143" );   // Usser name 
-define( 'PASSWORD' , "RhRp5FPrYs" ); // Database paassword
+define( 'HOST' , "***********" );   //database host
+define( 'DB' , "**************" );   // Database name
+define( 'USER' , "************" );   // Usser name 
+define( 'PASSWORD' , "********" ); // Database paassword
 define( 'KEY' , "devrajverma" );   // Secreat key for encrypt you information
 define( 'URL' , "https://demoseotools.herokuapp.com/" );  // url of utility where you want to install it.
 </pre>
