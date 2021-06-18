@@ -1,0 +1,11 @@
+---
+application:
+  name: "seotools"
+  project: "devapp"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-seotools"
+  routes:
+  - application_name: "seotools"
+    paths:
+    - "/*"
